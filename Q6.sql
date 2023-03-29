@@ -1,0 +1,5 @@
+SELECT TOP 3 M.EmployeeID, SUM(S.Hours) AS TotalHours
+FROM MAINTAIN M
+JOIN SERVICE S ON M.ServiceID = S.ServiceID
+GROUP BY M.EmployeeID
+ORDER BY TotalHours DESC
