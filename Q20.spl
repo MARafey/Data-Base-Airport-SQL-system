@@ -1,0 +1,4 @@
+SELECT PT.ModelNo, COUNT(AP.RegNo) AS TotalPlanes
+FROM Plane_Type AS PT
+LEFT JOIN AirPlane AS AP ON PT.ModelNo = AP.OF_TYPE
+GROUP BY PT.ModelNo;
