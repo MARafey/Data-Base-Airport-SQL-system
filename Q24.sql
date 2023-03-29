@@ -1,0 +1,5 @@
+SELECT PL.PERSON2, P.Name, COUNT(F.Model) AS AuthorizedPlanes
+FROM Pilot AS PL
+JOIN PERSON AS P ON PL.PERSON2 = P.SSN
+JOIN FLIES AS F ON PL.Liscence = F.Fliscence
+GROUP BY PL.PERSON2, P.Name;
