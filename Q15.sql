@@ -1,0 +1,6 @@
+SELECT P.Name
+FROM Pilot AS PL
+JOIN PERSON AS P ON PL.PERSON2 = P.SSN
+JOIN FLIES AS F ON PL.Liscence = F.Fliscence
+JOIN AirPlane AS AP ON F.Model = AP.OF_TYPE
+WHERE AP.UnderMaintenance = 1;
