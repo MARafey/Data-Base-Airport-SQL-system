@@ -1,0 +1,6 @@
+SELECT A.RegNo, PT.ModelNo
+FROM AirPlane A
+JOIN Plane_Type PT ON A.OF_TYPE = PT.ModelNo
+JOIN PLANE_SERVICE PS ON A.RegNo = PS.Reg
+JOIN SERVICE S ON PS.ServiceID = S.ServiceID
+WHERE S.Date >= '2020-09-08';
